@@ -31,6 +31,8 @@ router.get('/15-64ans', async (req, res) => {
     res.json({
       labels,
       datasets,
+      description:
+        "Nombre d'hommes et de femmes de 15 à 64 ans actives de 1975 à 2021 (en millions)",
       lecture:
         'Lecture : en 2021, 14 495 000 femmes de 15 à 64 ans sont actives',
       source: {
