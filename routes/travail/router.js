@@ -37,7 +37,7 @@ router.get('/15-64ans', async (req, res) => {
         'Lecture : en 2021, 14 495 000 femmes de 15 à 64 ans sont actives',
       source: {
         title:
-          "Activité selon le sexe et l'âge - Données annuelles de 1975 à 2021 (INSEE)",
+          'Activité selon le sexe de 15 à 64 ans - Données annuelles de 1975 à 2021 (INSEE)',
         link: 'https://www.insee.fr/fr/statistiques/2489758#figure1_radio1',
       },
     });
