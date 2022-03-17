@@ -28,7 +28,17 @@ router.get('/15-64ans', async (req, res) => {
       datasets[0].data.unshift(parseInt(d.Femmes, 10));
       datasets[1].data.unshift(parseInt(d.Hommes, 10));
     });
-    res.json({ labels, datasets });
+    res.json({
+      labels,
+      datasets,
+      lecture:
+        'Lecture : en 2021, 14 495 000 femmes de 15 à 64 ans sont actives',
+      source: {
+        title:
+          "Activité selon le sexe et l'âge - Données annuelles de 1975 à 2021 (INSEE)",
+        link: 'https://www.insee.fr/fr/statistiques/2489758#figure1_radio1',
+      },
+    });
   } catch (error) {
     throw Error(`Cannot serve travail_genre_age_15_64ans: ${error.message} `);
   }
