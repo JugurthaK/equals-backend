@@ -40,6 +40,60 @@ const getTravailHF15_64 = async () => {
   };
 }
 
+const getSalairesParCategorie = async () => {
+  const csvPath = 'datasources/salaires_par_categorie.csv';
+
+  const data = await converter(csvPath);
+  const labels = [];
+  const datasets = [
+    {
+      label: 'Cadres',
+      data: [],
+      borderColor: '#7fde69',
+      backgroundColor: '#7fde69',
+    },
+    {
+      label: 'Professions intermédiaires',
+      data: [],
+      borderColor: '#2c469c',
+      backgroundColor: '#2c469c',
+    },
+    {
+      label: 'Employés',
+      data: [],
+      borderColor: '#ff2525',
+      backgroundColor: '#ff2525',
+    },
+    {
+      label: 'Ouvriers',
+      data: [],
+      borderColor: '#f5fd00',
+      backgroundColor: '#f5fd00',
+    },
+  ];
+  data.forEach((d) => {
+    labels.push(d.Annee);
+    datasets[0].data.push(parseFloat(d.ecart_sm_cadre.replace(',','.'), 10));
+    datasets[1].data.push(parseFloat(d.ecart_sm_intermediaire.replace(',','.'), 10));
+    datasets[2].data.push(parseFloat(d.ecart_sm_employe.replace(',','.'), 10));
+    datasets[3].data.push(parseFloat(d.ecart_sm_ouvrier.replace(',','.'), 10));
+  });
+
+  return {
+    labels,
+    datasets,
+    description:
+      "Ecart de salaire en pourcentage entre hommes et femmes par catégorie",
+    lecture:
+      'Lecture : en 2019, les femmes ont un salaire net en équivalent temps plein inférieur de 15,6% à celui des hommes.',
+    source: {
+      title: 'Insee, bases Tous salariés',
+      link: 'https://www.insee.fr/fr/statistiques/2489758#figure1_radio1',
+    },
+  };
+}
+
 module.exports = {
   getTravailHF15_64,
+  getSalairesParCategorie,
 }
