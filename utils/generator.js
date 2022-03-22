@@ -1,6 +1,7 @@
 const { numberFormatter } = require('./typemanager');
 
 const generateDatasets = (data) => {
+  const nanFlag = false;
   const labels = [];
   const headers = Object.keys(data[0]);
   const year = headers[0];
@@ -17,11 +18,16 @@ const generateDatasets = (data) => {
     labels.push(d[year]);
     headersWithoutYear.forEach((header, index) => {
       const value = d[header];
-      datasets[index].data.push(numberFormatter(value));
+      const formatted = numberFormatter(value);
+      if (formatted !== null) datasets[index].data.push(formatted);
+      else {
+        datasets[index].data.push(NaN);
+        nanFlag = true;
+      }
     });
   });
 
-  return { labels, datasets };
+  return { labels, datasets, ...(nanFlag && { spanGaps: true }) };
 };
 
 module.exports = { generateDatasets };
