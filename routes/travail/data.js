@@ -30,7 +30,7 @@ const getTravailHF15_64 = async () => {
     datasets,
     description:
       "Nombre d'hommes et de femmes de 15 à 64 ans actives de 1975 à 2021 (en millions)",
-    lecture: 'Lecture : en 2021, 14 495 000 femmes de 15 à 64 ans sont actives',
+    lecture: 'en 2021, 14 495 000 femmes de 15 à 64 ans sont actives',
     source: {
       title:
         'Activité selon le sexe de 15 à 64 ans - Données annuelles de 1975 à 2021 (INSEE)',
@@ -86,7 +86,7 @@ const getSalairesParCategorie = async () => {
     description:
       'Ecart de salaire en pourcentage entre hommes et femmes par catégorie (le salaire moyen des hommes étant systématiquement plus élevé que celui des femmes)',
     lecture:
-      'Lecture : en 2019, les femmes ont un salaire net en équivalent temps plein inférieur de 15,6% à celui des hommes.',
+      'en 2019, les femmes ont un salaire net en équivalent temps plein inférieur de 15,6% à celui des hommes.',
     source: {
       title: 'Insee, bases Tous salariés',
       link: 'https://www.insee.fr/fr/statistiques/2489758#figure1_radio1',

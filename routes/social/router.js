@@ -1,10 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const { getPreoccupations } = require('./data');
+const {
+  getPreoccupations,
+  getVictimesAgressions,
+  getVictimesHomicides,
+} = require('./data');
 router.get('/', async (req, res) => {
-  const preoccupations = await getPreoccupations();
-
-  res.json(preoccupations);
+  Promise.all([
+    getPreoccupations(),
+    getVictimesAgressions(),
+    getVictimesHomicides(),
+  ]).then((data) => res.json(data));
 });
 
 module.exports = router;
