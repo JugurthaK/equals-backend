@@ -83,6 +83,7 @@ const getSalairesParCategorie = async () => {
   return {
     labels,
     datasets,
+    title: 'Ecart de salaire en pourcentage entre hommes et femmes',
     description:
       'Ecart de salaire en pourcentage entre hommes et femmes par catégorie (le salaire moyen des hommes étant systématiquement plus élevé que celui des femmes)',
     lecture:

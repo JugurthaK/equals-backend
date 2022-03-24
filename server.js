@@ -12,5 +12,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use('/api/v1/travail', require('./routes/travail/router'));
 app.use('/api/v1/social', require('./routes/social/router'));
+app.use('/api/v1/global', require('./routes/global/router'));
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));

@@ -9,6 +9,7 @@ const getPreoccupations = async () => {
 
   return {
     ...datasets,
+    title: 'Préoccupations des Français selon le sexe',
     lecture:
       'en 2019, 9,5 % des femmes âgées de 14 ans ou plus ont déclaré que la délinquance était le problème le plus important dans la société française actuelle parmi la liste des huit items proposés.',
     source: {
@@ -27,6 +28,7 @@ const getVictimesAgressions = async () => {
 
   return {
     ...datasets,
+    title: "Victimes d'agression ou de vol hors ménage selon l'âge et le sexe",
     lecture:
       "en 2019, 587 000 femmes déclarent avoir été victimes de vols, avec ou sans violences, de la part d'une personne ne vivant pas dans le ménage, dans l'année précédant l’enquête.",
     source: {
@@ -44,6 +46,7 @@ const getVictimesHomicides = async () => {
 
   return {
     ...datasets,
+    title: "Nombre et sexe des victimes d'homicide au sein du couple",
     lecture: 'en 2020 102 femmes ont été tuées par leur conjoint(e)',
     source: {
       title:
@@ -59,22 +62,23 @@ const getDiplomes = async () => {
   const datasets = generateDatasets(data);
   return {
     ...datasets,
+    title: 'Niveau de diplome selon le sexe',
     lecture:
       'en 2018 8 067 871 femmes ont un niveau de diplome supérieur à Bac + 2',
     source: {
       title: 'Niveau de diplome selon le sexe, en France entre 2006 et 2018 ',
       link: 'https://www.insee.fr/fr/statistiques/5397599?geo=FE-1&sommaire=5397601',
-    }
+    },
   };
 };
 
-const getPersonneVivantSeule= async () => {
+const getPersonneVivantSeule = async () => {
   const csvPath = 'datasources/personne_seule_age_sexe_1090-2018.csv';
   const data = await converter(csvPath);
   const datasets = generateDatasets(data);
-
   return {
     ...datasets,
+    title: "Personnes vivant seules dans leur logement selon l'âge et le sexe",
     lecture: `en 2018, parmi les femmes de 20 à 39 ans vivant dans un logement ordinaire, 14,8% résident seules.`,
     source: {
       title:
@@ -83,7 +87,6 @@ const getPersonneVivantSeule= async () => {
     },
   };
 };
-
 
 module.exports = {
   getPreoccupations,
