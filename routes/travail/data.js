@@ -95,7 +95,47 @@ const getSalairesParCategorie = async () => {
   };
 };
 
+const getTauxChomage = async () => {
+  const csvPath = 'datasources/taux_chomage_1975-2021.csv';
+
+  const data = await converter(csvPath);
+  const labels = [];
+  const datasets = [
+    {
+      label: 'Femmes',
+      data: [],
+      borderColor: '#0a9396',
+      backgroundColor: '#0a9396',
+    },
+    {
+      label: 'Hommes',
+      data: [],
+      borderColor: '#bb3e03',
+      backgroundColor: '#bb3e03',
+    },
+  ];
+  data.forEach((d) => {
+    labels.push(d.Annee);
+    datasets[0].data.push(parseFloat(d.Femmes.replace(',', '.'), 10));
+    datasets[1].data.push(parseFloat(d.Hommes.replace(',', '.'), 10));
+  });
+  
+  return {
+    labels,
+    datasets,
+    description:
+      'Taux de chômage en pourcentage entre hommes et femmes',
+    lecture:
+      'en 2021, les hommes et les femmes ont un taux de chômage quasiment identique.',
+    source: {
+      title: 'Insee, bases Tous salariés',
+      link: 'https://www.insee.fr/fr/outil-interactif/5367857/details/40_SOC/44_EGF/44D_Figure4#',
+    },
+  };
+};
+
 module.exports = {
   getTravailHF15_64,
   getSalairesParCategorie,
+  getTauxChomage,
 };
