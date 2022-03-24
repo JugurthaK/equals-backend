@@ -4,9 +4,11 @@ const {
   getPreoccupations,
   getVictimesAgressions,
   getVictimesHomicides,
+  getDiplomes,
 } = require('./data');
 router.get('/', async (req, res) => {
   Promise.all([
+    getDiplomes(),
     getPreoccupations(),
     getVictimesAgressions(),
     getVictimesHomicides(),

@@ -53,8 +53,24 @@ const getVictimesHomicides = async () => {
   };
 };
 
+const getDiplomes = async () => {
+  const csvPath = 'datasources/diplomes_femmes_hommes_2006-2018.csv';
+  const data = await converter(csvPath);
+  const datasets = generateDatasets(data);
+  return {
+    ...datasets,
+    lecture:
+      'en 2018 8 067 871 femmes ont un niveau de diplome supérieur à Bac + 2',
+    source: {
+      title: 'Niveau de diplome selon le sexe, en France entre 2006 et 2018 ',
+      link: 'https://www.insee.fr/fr/statistiques/5397599?geo=FE-1&sommaire=5397601',
+    },
+  };
+};
+
 module.exports = {
   getPreoccupations,
   getVictimesAgressions,
   getVictimesHomicides,
+  getDiplomes,
 };
