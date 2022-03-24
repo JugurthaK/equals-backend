@@ -75,7 +75,7 @@ const getPersonneVivantSeule= async () => {
 
   return {
     ...datasets,
-    lecture: `Lecture : en 2018, parmi les hommes de 80 ans ou plus vivant dans un logement ordinaire, 26,9% résident seuls.`,
+    lecture: `en 2018, parmi les femmes de 20 à 39 ans vivant dans un logement ordinaire, 14,8% résident seules.`,
     source: {
       title:
         "Personnes vivant seules dans leur logement selon l'âge et le sexe",
