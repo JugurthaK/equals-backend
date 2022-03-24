@@ -29,7 +29,7 @@ const generateTreeView = (categoryName, data) => {
 router.get('/treeview', async (req, res) => {
   const resArr = [];
   Promise.all([getTravailHF15_64(), getSalairesParCategorie()]).then((data) =>
-    resArr.push(generateTreeView('Travai', data))
+    resArr.push(generateTreeView('Travail', data))
   );
 
   Promise.all([
