@@ -9,14 +9,14 @@ const getTravailHF15_64 = async () => {
     {
       label: 'Femmes',
       data: [],
-      borderColor: '#f28de0',
-      backgroundColor: '#f28de0',
+      borderColor: '#0a9396',
+      backgroundColor: '#0a9396',
     },
     {
       label: 'Hommes',
       data: [],
-      borderColor: '#2554ff',
-      backgroundColor: '#2554ff',
+      borderColor: '#bb3e03',
+      backgroundColor: '#bb3e03',
     },
   ];
   data.forEach((d) => {
@@ -48,26 +48,26 @@ const getSalairesParCategorie = async () => {
     {
       label: 'Cadres',
       data: [],
-      borderColor: '#7fde69',
-      backgroundColor: '#7fde69',
+      borderColor: '#0a9396',
+      backgroundColor: '#0a9396',
     },
     {
       label: 'Ouvriers',
       data: [],
-      borderColor: '#f5fd00',
-      backgroundColor: '#f5fd00',
+      borderColor: '#bb3e03',
+      backgroundColor: '#bb3e03',
     },
     {
       label: 'Professions intermédiaires',
       data: [],
-      borderColor: '#2c469c',
-      backgroundColor: '#2c469c',
+      borderColor: '#94d2bd',
+      backgroundColor: '#94d2bd',
     },
     {
       label: 'Employés (comptable, secrétaire...)',
       data: [],
-      borderColor: '#ff2525',
-      backgroundColor: '#ff2525',
+      borderColor: '#ca6702',
+      backgroundColor: '#ca6702',
     },
   ];
   data.forEach((d) => {
