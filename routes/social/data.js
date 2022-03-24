@@ -64,13 +64,31 @@ const getDiplomes = async () => {
     source: {
       title: 'Niveau de diplome selon le sexe, en France entre 2006 et 2018 ',
       link: 'https://www.insee.fr/fr/statistiques/5397599?geo=FE-1&sommaire=5397601',
+    }
+  };
+};
+
+const getPersonneVivantSeule= async () => {
+  const csvPath = 'datasources/personne_seule_age_sexe_1090-2018.csv';
+  const data = await converter(csvPath);
+  const datasets = generateDatasets(data);
+
+  return {
+    ...datasets,
+    lecture: `Lecture : en 2018, parmi les hommes de 80 ans ou plus vivant dans un logement ordinaire, 26,9% résident seuls.`,
+    source: {
+      title:
+        "Personnes vivant seules dans leur logement selon l'âge et le sexe",
+      link: 'https://www.insee.fr/fr/statistiques/2381512#tableau-figure1',
     },
   };
 };
+
 
 module.exports = {
   getPreoccupations,
   getVictimesAgressions,
   getVictimesHomicides,
   getDiplomes,
+  getPersonneVivantSeule,
 };
