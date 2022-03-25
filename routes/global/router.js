@@ -19,7 +19,7 @@ const generateTreeView = (categoryName, data) => {
     tmp.children.push({
       name: dataset.title,
       labels: dataset.labels,
-      datasets: dataset.datasets,
+      children: dataset.datasets.map(dataset => ({ name: dataset.label, data: dataset.data }))
     });
   });
 
