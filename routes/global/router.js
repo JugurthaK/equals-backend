@@ -17,7 +17,7 @@ const generateTreeView = (categoryName, data) => {
   tmp.children = [];
   data.forEach((dataset) => {
     tmp.children.push({
-      title: dataset.title,
+      name: dataset.title,
       labels: dataset.labels,
       datasets: dataset.datasets,
     });

@@ -26,6 +26,7 @@ const getTravailHF15_64 = async () => {
   });
 
   return {
+    id: 1,
     labels,
     title: "Nombre d'hommes et de femmes de 15 à 64 ans actives de 1975 à 2021 (en millions)",
     datasets,
