@@ -62,11 +62,11 @@ const getDiplomes = async () => {
   const datasets = generateDatasets(data);
   return {
     ...datasets,
-    title: 'Niveau de diplome selon le sexe',
+    title: 'Niveau de diplôme selon le sexe',
     lecture:
-      'en 2018 8 067 871 femmes ont un niveau de diplome supérieur à Bac + 2',
+      'en 2018 8 067 871 femmes ont un niveau de diplôme supérieur à Bac + 2',
     source: {
-      title: 'Niveau de diplome selon le sexe, en France entre 2006 et 2018 ',
+      title: 'Niveau de diplôme selon le sexe, en France entre 2006 et 2018 ',
       link: 'https://www.insee.fr/fr/statistiques/5397599?geo=FE-1&sommaire=5397601',
     },
   };
