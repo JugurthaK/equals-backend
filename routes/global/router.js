@@ -17,9 +17,8 @@ const generateTreeView = (categoryName, data) => {
   tmp.children = [];
   data.forEach((dataset) => {
     tmp.children.push({
-      title: dataset.title,
-      labels: dataset.labels,
-      datasets: dataset.datasets,
+      name: dataset.title,
+      children: dataset.datasets.map(dts => ({ name: dts.label, data: dts.data, range: [dataset.labels[0], dataset.labels[dataset.labels.length - 1]] }))
     });
   });
 

@@ -26,7 +26,9 @@ const getTravailHF15_64 = async () => {
   });
 
   return {
+    id: 1,
     labels,
+    title: "Nombre d'hommes et de femmes de 15 à 64 ans actives de 1975 à 2021 (en millions)",
     datasets,
     description:
       "Nombre d'hommes et de femmes de 15 à 64 ans actives de 1975 à 2021 (en millions)",
@@ -83,9 +85,9 @@ const getSalairesParCategorie = async () => {
   return {
     labels,
     datasets,
-    title: 'Ecart de salaire en pourcentage entre hommes et femmes',
+    title: 'Écart de salaire en pourcentage entre hommes et femmes',
     description:
-      'Ecart de salaire en pourcentage entre hommes et femmes par catégorie (le salaire moyen des hommes étant systématiquement plus élevé que celui des femmes)',
+      'Écart de salaire en pourcentage entre hommes et femmes par catégorie (le salaire moyen des hommes étant systématiquement plus élevé que celui des femmes)',
     lecture:
       'en 2019, les femmes ont un salaire net en équivalent temps plein inférieur de 15,6% à celui des hommes.',
     source: {
@@ -119,16 +121,17 @@ const getTauxChomage = async () => {
     datasets[0].data.push(parseFloat(d.Femmes.replace(',', '.'), 10));
     datasets[1].data.push(parseFloat(d.Hommes.replace(',', '.'), 10));
   });
-  
+
   return {
     labels,
+    title: 'Taux de chômage en pourcentage entre hommes et femmes',
     datasets,
     description:
       'Taux de chômage en pourcentage entre hommes et femmes',
     lecture:
-      'en 2021, les hommes et les femmes ont un taux de chômage quasiment identique.',
+      'en 2021, 7,8% des femmes actives sont au chômage.',
     source: {
-      title: 'Insee, bases Tous salariés',
+      title: "Chômage selon le sexe et l'âge - Données annuelles de 1975 à 2021",
       link: 'https://www.insee.fr/fr/outil-interactif/5367857/details/40_SOC/44_EGF/44D_Figure4#',
     },
   };
