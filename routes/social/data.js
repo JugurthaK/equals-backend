@@ -36,6 +36,8 @@ const getVictimesAgressions = async () => {
         "Victimes d'agression ou de vol hors ménage selon l'âge et le sexe : effectifs",
       link: 'https://www.insee.fr/fr/statistiques/2525801',
     },
+    helper:
+      "Ces donées mettent en avant les agressions hors ménage, de ce fait les agressions physiques au sein du menage (comme par exemple au sein d'un couple) ne sont pas comptabilisées",
   };
 };
 
@@ -62,13 +64,15 @@ const getDiplomes = async () => {
   const datasets = generateDatasets(data);
   return {
     ...datasets,
-    title: 'Niveau de diplome selon le sexe',
+    title: 'Niveau de diplôme selon le sexe',
     lecture:
-      'en 2018 8 067 871 femmes ont un niveau de diplome supérieur à Bac + 2',
+      'en 2018 8 067 871 femmes ont un niveau de diplôme supérieur à Bac + 2',
     source: {
-      title: 'Niveau de diplome selon le sexe, en France entre 2006 et 2018 ',
+      title: 'Niveau de diplôme selon le sexe, en France entre 2006 et 2018 ',
       link: 'https://www.insee.fr/fr/statistiques/5397599?geo=FE-1&sommaire=5397601',
     },
+    helper:
+      "On estime important de préciser qu'un diplôme niveau Bac +2 est plus valorisé qu'un diplôme de niveau inférieur",
   };
 };
 
