@@ -85,14 +85,14 @@ const getSalairesParCategorie = async () => {
   return {
     labels,
     datasets,
-    title: 'Écart de salaire en pourcentage entre hommes et femmes',
+    title: 'Écart de rémunération femmes-hommes',
     description:
       'Écart de salaire en pourcentage entre hommes et femmes par catégorie (le salaire moyen des hommes étant systématiquement plus élevé que celui des femmes)',
     lecture:
       'en 2019, les femmes ont un salaire net en équivalent temps plein inférieur de 15,6% à celui des hommes.',
     source: {
       title: 'Insee, bases Tous salariés',
-      link: 'https://www.insee.fr/fr/statistiques/2489758#figure1_radio1',
+      link: 'https://www.insee.fr/fr/statistiques/4514861',
     },
   };
 };
