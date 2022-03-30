@@ -37,7 +37,7 @@ const getVictimesAgressions = async () => {
       link: 'https://www.insee.fr/fr/statistiques/2525801',
     },
     helper:
-      "Ces donées mettent en avant les agressions hors ménage, de ce fait les agressions physiques au sein du menage (comme par exemple au sein d'un couple) ne sont pas comptabilisées",
+      "Ces données mettent en avant les agressions hors ménage, de ce fait les agressions physiques au sein du menage (comme par exemple au sein d'un couple) ne sont pas comptabilisées",
   };
 };
 
